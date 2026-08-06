@@ -104,7 +104,7 @@ function App() {
             <a className="text-link" href="#projects">Explore the work <ArrowDown size={16} /></a>
           </div>
           <div className="portrait-wrap reveal reveal-delay-1">
-            <div className="portrait-frame"><img src="/images/vineeth_photo.jpg" alt="Vineeth Thadigotla, known as Ricky Fender" /></div>
+            <div className="portrait-frame"><img src="/image.png" alt="Vineeth Thadigotla, known as Ricky Fender" /></div>
             <span className="portrait-caption">VINEETH THADIGOTLA<br />AKA RICKY FENDER</span>
             <span className="portrait-index">01 / 05</span>
           </div>
