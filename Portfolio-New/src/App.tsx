@@ -84,7 +84,7 @@ function App() {
         <a className="wordmark" href="#top" onClick={closeMenu} aria-label="Ricky Fender home">RF<span>.</span></a>
         <nav className={menuOpen ? 'nav-links nav-open' : 'nav-links'} aria-label="Main navigation">
           {['About', 'Skills', 'Projects', 'History', 'Contact'].map((label, index) => (
-            <a
+            
               key={label}
               href={`#${label.toLowerCase()}`}
               onClick={closeMenu}
