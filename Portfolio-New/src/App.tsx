@@ -38,11 +38,11 @@ const skills: Skill[] = [
 const projects: Project[] = [
   {
     number: '01',
-    title: 'InsightFlow',
-    description: 'AI-powered profile intelligence platform. Analyses and elevates professional profiles using Next.js, Node.js, Express and MongoDB on the backend.',
-    tags: ['Full-Stack', 'Next.js', 'MongoDB', 'AI'],
-    href: 'https://github.com/FenderRicky',
-    kind: 'Platform / 2025',
+    title: 'Groundtruth',
+    description: 'A real profile readiness audit. Analyzes your actual GitHub activity and resume together against a target job — real skill gaps, real over-exposure, no template scoring.',
+    tags: ['FastAPI', 'Groq', 'GitHub API', 'Vercel'],
+    href: 'https://groundtruthai.vercel.app',
+    kind: 'AI Tool / 2026',
   },
   {
     number: '02',
@@ -83,7 +83,7 @@ function App() {
       <header className="site-header">
         <a className="wordmark" href="#top" onClick={closeMenu} aria-label="Ricky Fender home">RF<span>.</span></a>
         <nav className={menuOpen ? 'nav-links nav-open' : 'nav-links'} aria-label="Main navigation">
-          {['About', 'Skills', 'Projects', 'Contact'].map((label, index) => (
+          {['About', 'Skills', 'Projects', 'History', 'Contact'].map((label, index) => (
             <a
               key={label}
               href={`#${label.toLowerCase()}`}
@@ -141,7 +141,7 @@ function App() {
       </section>
 
       <section className="section projects-section page-width" id="projects">
-        <div className="section-heading reveal"><span className="section-number">03</span><h2>FEATURED<br className="mobile-only" /> PROJECTS</h2><span className="section-aside">Selected work<br />/ 2024—25</span></div>
+        <div className="section-heading reveal"><span className="section-number">03</span><h2>FEATURED<br className="mobile-only" /> PROJECTS</h2><span className="section-aside">Selected work<br />/ 2024—26</span></div>
         <div className="projects-list">{projects.map((project, index) => <a className={`project-row reveal reveal-delay-${(index % 3) + 1}`} href={project.href} target="_blank" rel="noreferrer" key={project.number} onMouseMove={(e) => { const rect = e.currentTarget.getBoundingClientRect(); e.currentTarget.style.setProperty('--mx', `${e.clientX - rect.left}px`); e.currentTarget.style.setProperty('--my', `${e.clientY - rect.top}px`); }}><span className="item-number">{project.number}</span><div className="project-title"><span>{project.kind}</span><h3>{project.title}{project.title === 'Creatiwise' && <em>— Brand Identity</em>}</h3></div><p>{project.description}</p><div className="project-footer"><div className="tag-cloud">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><ArrowUpRight size={22} /></div></a>)}</div>
       </section>
 
