@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
-import MaskedHeading from './components/MaskedHeading.jsx';
 import CursorGrid from './components/CursorGrid.jsx';
 import GlareHover from './components/GlareHover.jsx';
-import ParticleText from './components/ParticleText.jsx';
 import {
   ArrowDown,
   ArrowUpRight,
@@ -101,12 +99,12 @@ function App() {
         <div className="hero-grid page-width">
           <div className="hero-copy reveal">
             <p className="eyebrow">Independent creative / Hyderabad, IN</p>
-            <h1>RICKY<br /><MaskedHeading text="FENDER" tag="span" src="/hero-fill.jpg" mediaType="image" fillScale={1.3} parallax={22} reveal="rise" trigger="view" align="left" weight={900} tracking={-0.01} textScale={0.16} className="masked-fender" style={{}} /></h1>
+            <h1>RICKY<br /><span>FENDER</span></h1>
             <p className="hero-intro">Designer. Developer. AI builder.<br />I don't specialise — I execute<br className="desktop-break" /> across the board.</p>
-            <a className="text-link" href="#projects">Explore the work <ArrowDown size={16} /></a>
+            <GlareHover width="auto" height="auto" background="transparent" borderRadius="0px" borderColor="transparent" glareColor="#ffffff" glareOpacity={0.25} glareAngle={-35} glareSize={280} transitionDuration={650} className="glare-inline"><a className="text-link" href="#projects">Explore the work <ArrowDown size={16} /></a></GlareHover>
           </div>
           <div className="portrait-wrap reveal reveal-delay-1">
-            <div className="portrait-frame"><img src="/image.jpg" alt="Vineeth Thadigotla, known as Ricky Fender" /></div>
+            <GlareHover width="100%" height="100%" background="transparent" borderRadius="0px" borderColor="transparent" glareColor="#ffffff" glareOpacity={0.18} glareAngle={-35} glareSize={200} transitionDuration={800} className="glare-portrait"><div className="portrait-frame"><img src="/image.jpg" alt="Vineeth Thadigotla, known as Ricky Fender" /></div></GlareHover>
             <span className="portrait-caption">VINEETH THADIGOTLA<br />AKA RICKY FENDER</span>
             <span className="portrait-index">01 / 05</span>
           </div>
@@ -138,7 +136,7 @@ function App() {
 
       <section className="section projects-section page-width" id="projects">
         <div className="section-heading reveal"><span className="section-number">03</span><h2>FEATURED<br className="mobile-only" /> PROJECTS</h2><span className="section-aside">Selected work<br />/ 2024—26</span></div>
-        <div className="projects-list">{projects.map((project, index) => <a className={`project-row reveal reveal-delay-${(index % 3) + 1}`} href={project.href} target="_blank" rel="noreferrer" key={project.number} onMouseMove={(e) => { const rect = e.currentTarget.getBoundingClientRect(); e.currentTarget.style.setProperty('--mx', `${e.clientX - rect.left}px`); e.currentTarget.style.setProperty('--my', `${e.clientY - rect.top}px`); }}><span className="item-number">{project.number}</span><div className="project-title"><span>{project.kind}</span><h3>{project.title}{project.title === 'Creatiwise' && <em>— Brand Identity</em>}</h3></div><p>{project.description}</p><div className="project-footer"><div className="tag-cloud">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><ArrowUpRight size={22} /></div></a>)}</div>
+        <div className="projects-list">{projects.map((project, index) => <a className={`project-row reveal reveal-delay-${(index % 3) + 1}`} href={project.href} target="_blank" rel="noreferrer" key={project.number} onMouseMove={(e) => { const rect = e.currentTarget.getBoundingClientRect(); e.currentTarget.style.setProperty('--mx', `${e.clientX - rect.left}px`); e.currentTarget.style.setProperty('--my', `${e.clientY - rect.top}px`); }}><GlareHover width="100%" height="100%" background="transparent" borderRadius="0px" borderColor="transparent" glareColor="#ffffff" glareOpacity={0.08} glareAngle={-35} glareSize={260} transitionDuration={750} className="glare-project-row"><span className="item-number">{project.number}</span><div className="project-title"><span>{project.kind}</span><h3>{project.title}{project.title === 'Creatiwise' && <em>— Brand Identity</em>}</h3></div><p>{project.description}</p><div className="project-footer"><div className="tag-cloud">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><ArrowUpRight size={22} /></div></GlareHover></a>)}</div>
       </section>
 
       <section className="section history-section page-width" id="history">
@@ -146,7 +144,7 @@ function App() {
         <div className="history-row reveal reveal-delay-1"><div className="history-date">Ongoing</div><div className="history-role"><span>Freelance</span><h3>Graphic Designer <b>·</b> Upwork</h3></div><ul><li>Brand identity, logo design and visual campaign work for clients</li><li>UI/UX design projects from app interfaces to marketing assets</li><li>Positioned as a design-forward hybrid creative</li></ul></div>
       </section>
 
-      <section className="contact-section" id="contact"><div className="page-width contact-inner reveal"><div className="section-heading"><span className="section-number">05</span><div className="contact-particle-heading"><ParticleText text="GOT A PROJECT IN MIND?" color="#ffffff" highlightColor="#0a0a0a" particleSize={2.4} density={4} scatter={160} gatherDuration={1400} stagger={380} pointerRepel={35} repelRadius={110} idleDrift={0.5} trigger="view" fontSize="clamp(38px, 7vw, 96px)" fontWeight={700} fontFamily="Anton, sans-serif" glow={false} style={{}} /></div></div><p>Open to internships, freelance work and anything worth building. If it's interesting, reach out.</p><a className="contact-button" href="mailto:thadigotlavineeth7@gmail.com">Email Me <Mail size={18} /></a><div className="social-links"><a href="https://github.com/FenderRicky" target="_blank" rel="noreferrer"><Code size={18} /> GitHub</a><a href="https://www.linkedin.com/in/vineeth-thadigotla-0569381b9/" target="_blank" rel="noreferrer"><Share2 size={18} /> LinkedIn</a><a href="https://www.instagram.com/fender_ricky" target="_blank" rel="noreferrer"><Camera size={18} /> Instagram</a></div></div></section>
+      <section className="contact-section" id="contact"><div className="page-width contact-inner reveal"><div className="section-heading"><span className="section-number">05</span><h2>GOT A PROJECT<br />IN MIND<span>?</span></h2></div><p>Open to internships, freelance work and anything worth building. If it's interesting, reach out.</p><GlareHover width="100%" height="auto" background="transparent" borderRadius="0px" borderColor="transparent" glareColor="#ffffff" glareOpacity={0.2} glareAngle={-35} glareSize={220} transitionDuration={650} className="glare-inline"><a className="contact-button" href="mailto:thadigotlavineeth7@gmail.com">Email Me <Mail size={18} /></a></GlareHover><div className="social-links"><GlareHover width="auto" height="auto" background="transparent" borderRadius="0px" borderColor="transparent" glareColor="#0a0a0a" glareOpacity={0.25} glareAngle={-35} glareSize={260} transitionDuration={600} className="glare-inline"><a href="https://github.com/FenderRicky" target="_blank" rel="noreferrer"><Code size={18} /> GitHub</a></GlareHover><GlareHover width="auto" height="auto" background="transparent" borderRadius="0px" borderColor="transparent" glareColor="#0a0a0a" glareOpacity={0.25} glareAngle={-35} glareSize={260} transitionDuration={600} className="glare-inline"><a href="https://www.linkedin.com/in/vineeth-thadigotla-0569381b9/" target="_blank" rel="noreferrer"><Share2 size={18} /> LinkedIn</a></GlareHover><GlareHover width="auto" height="auto" background="transparent" borderRadius="0px" borderColor="transparent" glareColor="#0a0a0a" glareOpacity={0.25} glareAngle={-35} glareSize={260} transitionDuration={600} className="glare-inline"><a href="https://www.instagram.com/fender_ricky" target="_blank" rel="noreferrer"><Camera size={18} /> Instagram</a></GlareHover></div></div></section>
 
       <footer className="site-footer page-width"><span>© 2026 Vineeth Thadigotla — Ricky Fender</span><span>Hyderabad, India</span><a href="#top">Back to top ↑</a></footer>
     </main>
